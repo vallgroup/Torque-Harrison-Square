@@ -20,6 +20,7 @@ if ( have_rows( $modules ) ):
         $cta = get_sub_field('cta');
 
 
+        include locate_template('/parts/acf/modules/text_and_image.php');
 
         break;
     }

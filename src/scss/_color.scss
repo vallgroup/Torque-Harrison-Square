@@ -41,6 +41,10 @@ light-grey : Light Grey
 
 .bg-white {
   @include make-bg-color-class($white, $teal-blue);
+
+  p {
+    color: $teal-grey;
+  }
 }
 
 .bg-dark-grey {
