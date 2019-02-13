@@ -1,0 +1,61 @@
+/*
+ACF options
+
+teal : Teal
+white : White
+dark-grey : Dark Grey
+light-grey : Light Grey
+*/
+
+@mixin make-bg-color-class($background_color, $font_color) {
+  background-color: $background_color;
+  color: $font_color;
+
+  button {
+    background-color: $font_color;
+    color: $background_color;
+
+    &:hover {
+      border-color: $font_color;
+      background-color: $background_color;
+      color: $font_color;
+    }
+  }
+}
+
+.teal {
+  color: $teal-blue;
+}
+
+.white {
+  color: $white;
+}
+
+.dark-grey {
+  color: $teal-grey;
+}
+
+.bg-teal {
+  @include make-bg-color-class($teal-blue, $white);
+}
+
+.bg-white {
+  @include make-bg-color-class($white, $teal-blue);
+}
+
+.bg-dark-grey {
+  @include make-bg-color-class($teal-grey, $white);
+}
+
+.bg-light-grey {
+  @include make-bg-color-class($teal-grey-light, $greyish-brown);
+
+  button {
+    background-color: $teal-grey;
+    color: $white;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
