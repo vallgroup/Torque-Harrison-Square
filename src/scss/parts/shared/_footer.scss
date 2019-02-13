@@ -1,0 +1,141 @@
+footer {
+  padding: 30px $bodyPadding1 20px;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: $dark-teal;
+  font-size: 13px;
+  line-height: 1.54;
+  letter-spacing: normal;
+  text-align: center;
+  color: $light-gray;
+
+  @include respond-to(tablet) {
+    text-align: left;
+  }
+
+  @include respond-to(desktop) {
+    padding: 60px $bodyPadding1 50px;
+  }
+
+  h2 {
+    color: $white;
+
+    @include respond-to(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  img {
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .footer-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include respond-to(tablet) {
+      align-items: flex-end;
+    }
+
+    @include respond-to(desktop) {
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
+
+    .footer-col {
+      margin-bottom: 20px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      &.footer-col-1 {
+        width: 100%;
+
+        @include respond-to(tablet) {
+          padding-right: 10%;
+          width: 33%;
+          box-sizing: border-box;
+        }
+
+        @include respond-to(desktop) {
+          padding: 0;
+          width: auto;
+        }
+      }
+
+      &.footer-col-2 {
+        width: 100%;
+
+        @include respond-to(tablet) {
+          padding-left: 10%;
+          width: 66%;
+          box-sizing: border-box;
+        }
+
+        @include respond-to(desktop) {
+          padding: 0 10%;
+          flex-grow: 1;
+          width: auto;
+        }
+
+        .footer-contacts {
+          @include respond-to(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          .footer-contact {
+            margin-top: 10px;
+
+            @include respond-to(tablet) {
+              margin-right: 5%;
+            }
+          }
+        }
+      }
+
+      &.footer-col-3 {
+        width: 100%;
+
+        @include respond-to(tablet) {
+          padding-right: 5%;
+          width: 33%;
+          box-sizing: border-box;
+        }
+
+        @include respond-to(desktop) {
+          padding: 0;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  // swap order on mobile
+  @include respond-to-max(tablet) {
+    .footer-col {
+      img {
+        float: none;
+        padding: 0;
+      }
+    }
+
+    .footer-col-1 {
+      order: 1;
+    }
+    .footer-col-2 {
+      order: 3;
+    }
+    .footer-col-3 {
+      order: 2;
+    }
+  }
+}

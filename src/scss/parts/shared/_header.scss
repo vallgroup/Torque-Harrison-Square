@@ -55,6 +55,7 @@ header {
       .torque-burger-menu {
         position: relative;
         margin-left: 5px;
+        cursor: pointer;
 
         &::before {
           content: "MENU";
