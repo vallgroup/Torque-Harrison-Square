@@ -2,19 +2,96 @@
 @import "../partials/variables";
 
 body {
+  font-family: $font_primary;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.46;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: -0.2px;
+
+  @include respond-to(tablet) {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: normal;
+  }
 }
 
 h1 {
+  font-family: $font_primary;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+
+  @include respond-to(tablet) {
+    font-size: 48px;
+    line-height: 0.98;
+  }
 }
 
 h2 {
+  font-family: $font_primary;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+
+  @include respond-to(tablet) {
+    font-size: 28px;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 36px;
+  }
 }
 
 h3 {
+  font-family: $font_primary;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0px;
+  color: $white;
 }
 
 h4 {
+  font-family: $font_primary;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: 1.3px;
+
+  @include respond-to(tablet) {
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: 1.3px;
+    color: $white;
+  }
 }
 
-a {
+button {
+  padding: 5px 10px;
+  width: auto;
+  font-family: $font_secondary;
+  font-size: 14px;
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  background-color: $teal-blue;
+  color: $white;
+
+  @include respond-to(tablet) {
+    padding: 10px;
+  }
 }
