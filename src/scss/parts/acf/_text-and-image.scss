@@ -58,8 +58,10 @@
     flex-direction: row-reverse;
 
     .content-wrapper {
-      padding-left: $bodyPadding1;
-      padding-right: 7vw;
+      @include respond-to(desktop) {
+        padding-left: $bodyPadding1;
+        padding-right: 7vw;
+      }
     }
   }
 
@@ -74,6 +76,10 @@
       @include respond-to(tablet) {
         padding-top: 50px;
       }
+
+      @include respond-to(desktop) {
+        padding-bottom: 45px;
+      }
     }
   }
 }
@@ -81,7 +87,7 @@
 main > .text-and-image-section {
   .content-wrapper {
     @include respond-to(desktop) {
-      padding-top: 150px !important;
+      padding-top: 130px !important;
     }
   }
 }
