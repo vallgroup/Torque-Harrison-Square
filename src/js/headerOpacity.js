@@ -1,24 +1,36 @@
 ($ => {
   $(document).ready(() => {
-    const MAX_OPACITY_AT_SCROLL = 100;
+    const OPAQUE_AT_SCROLL = 100;
+    const TOGGLE_CLASS = "is-opaque";
 
-    updateOpacity($(window).scrollTop());
+    const background = $(".header-background-color");
+    const state = { isOpaque: false };
 
-    $(window).scroll(handleScroll);
-
-    function handleScroll() {
-      const newScroll = $(window).scrollTop();
-
-      if (newScroll > MAX_OPACITY_AT_SCROLL) return;
-
-      updateOpacity(newScroll);
+    if (!background.length) {
+      return;
     }
 
-    function updateOpacity(newScroll) {
-      const background = $(".header-background-color");
-      const opacity = Math.min(newScroll / MAX_OPACITY_AT_SCROLL, 1);
+    updateState();
+    $(window).scroll(updateState);
 
-      background.css({ opacity });
+    function updateState() {
+      const currentScroll = $(window).scrollTop();
+
+      if (currentScroll >= OPAQUE_AT_SCROLL) {
+        updateOpaque(true);
+      } else {
+        updateOpaque(false);
+      }
+    }
+
+    function updateOpaque(newOpaque) {
+      if (newOpaque === state.isOpaque) return;
+
+      newOpaque
+        ? background.addClass(TOGGLE_CLASS)
+        : background.removeClass(TOGGLE_CLASS);
+
+      state.isOpaque = newOpaque;
     }
   });
 })(jQuery);
