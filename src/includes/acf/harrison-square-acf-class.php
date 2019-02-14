@@ -48,15 +48,13 @@ class HSQ_ACF {
       				'id' => '',
       			),
       			'choices' => array(
-      				'hero' => 'Featured Image Hero',
       				'summary' => 'Page Summary',
       				'modules' => 'Modules',
       			),
       			'allow_custom' => 0,
       			'default_value' => array(
-      				0 => 'hero',
-      				1 => 'summary',
-      				2 => 'modules',
+      				0 => 'summary',
+      				1 => 'modules',
       			),
       			'layout' => 'vertical',
       			'toggle' => 1,

@@ -3,8 +3,9 @@
 $included_fields = get_field('include_sections');
 
 // hero
-if (in_array('hero',$included_fields)) {
-  $url = get_the_post_thumbnail_url( null, 'large' );
+$url = get_the_post_thumbnail_url( null, 'large' );
+
+if ($url) {
 ?>
 
   <img src="<?php echo $url; ?>" class="hero-image" />
