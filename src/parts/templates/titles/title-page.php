@@ -21,24 +21,42 @@ if (in_array('summary',$included_fields)) {
   $subheading = $page_summary['subheading'];
   $heading = $page_summary['heading'];
   $summary = $page_summary['summary'];
-?>
 
-  <div class="summary-wrapper" >
 
-    <?php if ($subheading) { ?>
-      <h4><?php echo $subheading; ?></h4>
-    <?php } ?>
+  // if page is a child, use parent id, otherwise use it's own id
+  $parent = $post->post_parent !== 0 ? $post->post_parent : $post->ID;
 
-    <?php if ($heading) { ?>
-      <h1><?php echo $heading; ?></h1>
-    <?php } ?>
+  $has_children = count(get_pages( array( 'child_of' => $parent ) ));
 
-    <?php if ($summary) { ?>
-      <div class="summary" >
-        <?php echo $summary; ?>
+  $parent_class = $has_children ? 'has-child-links' : '';
+  ?>
+
+  <div class="summary-section <?php echo $parent_class; ?>" >
+
+    <?php if ($has_children) { ?>
+      <div class="child-links-wrapper" >
+        <h3>LEARN MORE ABOUT HARRISON SQUARE</h3>
+        <?php include locate_template('/parts/shared/heirarchy/child-links.php'); ?>
       </div>
     <?php } ?>
+
+    <div class="summary-wrapper" >
+
+      <?php if ($subheading) { ?>
+        <h4><?php echo $subheading; ?></h4>
+      <?php } ?>
+
+      <?php if ($heading) { ?>
+        <h1><?php echo $heading; ?></h1>
+      <?php } ?>
+
+      <?php if ($summary) { ?>
+        <div class="summary" >
+          <?php echo $summary; ?>
+        </div>
+      <?php } ?>
+    </div>
+
   </div>
-<?php
-}
-?>
+
+<?php } ?>
