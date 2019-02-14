@@ -21,7 +21,6 @@ header {
 
   .torque-header-content-wrapper {
     position: relative;
-    z-index: 1;
     display: flex;
     align-items: center;
     padding: 30px $bodyPadding1;
@@ -59,6 +58,7 @@ header {
 
       .torque-burger-menu {
         position: relative;
+        z-index: 101;
         margin-left: 5px;
         cursor: pointer;
 
