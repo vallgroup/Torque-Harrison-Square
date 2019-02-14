@@ -15,8 +15,10 @@
 
   </div>
 
-  <div class="torque-navigation-toggle torque-header-menu-items-mobile">
-    <?php get_template_part( 'parts/shared/header-parts/menu-items/menu-items', 'stacked'); ?>
+  <div class="torque-navigation-toggle mega-menu-wrapper">
+    <div class="mega-menu-overlay" ></div>
+
+    <?php get_template_part( 'parts/shared/mega-menu' ); ?>
   </div>
 
 </header>
