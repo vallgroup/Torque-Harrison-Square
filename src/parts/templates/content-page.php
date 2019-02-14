@@ -5,6 +5,10 @@
  * @package Torque
  */
 
-get_template_part('/parts/acf/modules');
+$included_fields = get_field('include_sections');
+
+if (in_array('modules',$included_fields)) {
+  get_template_part('/parts/acf/modules');
+}
 
 ?>
