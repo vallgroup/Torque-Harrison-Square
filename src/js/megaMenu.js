@@ -4,17 +4,15 @@
 
     parentEls.each(function() {
       const parent = $(this);
+      const parentClickEl = parent.find(".torque-mega-menu-item-title-parent");
 
-      parent.click(event => {
-        const childrenElsWrapper = parent.find(
-          ".mega-menu-child-items-wrapper"
-        );
+      parentClickEl.click(event => {
+        const hasChildren = parent.hasClass("has-children");
 
-        if (!childrenElsWrapper.length) {
+        if (!hasChildren) {
           return;
         }
 
-        event.stopPropagation();
         event.preventDefault();
 
         parent.toggleClass("show-children");
