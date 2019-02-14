@@ -23,6 +23,20 @@ if ( have_rows( $modules ) ):
         include locate_template('/parts/acf/modules/text_and_image.php');
 
         break;
+
+      case 'images' :
+
+        $anchor = get_sub_field('anchor');
+        $number_images = get_sub_field('number_images');
+        $image_1 = get_sub_field('image_1');
+        $image_2_start = get_sub_field('image_2_start');
+        $image_2 = get_sub_field('image_2');
+        $stack_on_tablet = get_sub_field('stack_on_tablet');
+
+
+        include locate_template('/parts/acf/modules/images.php');
+
+        break;
     }
 
   endwhile;
