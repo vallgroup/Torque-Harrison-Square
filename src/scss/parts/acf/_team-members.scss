@@ -1,0 +1,76 @@
+.team-members-module {
+  padding: 30px $bodyPadding1;
+
+  background-color: $teal-grey;
+
+  @include respond-to(tablet) {
+    padding: 80px $bodyPadding1;
+  }
+
+  .team-member {
+    margin: 60px 0;
+
+    @include respond-to(tablet) {
+      display: flex;
+      align-items: flex-start;
+      margin: 80px 0;
+    }
+
+    @include respond-to(desktop) {
+      align-items: center;
+      margin: 100px 0;
+    }
+
+    .team-member-image {
+      padding-bottom: 20px;
+      width: 60%;
+      text-align: center;
+
+      @include respond-to(tablet) {
+        padding-right: 10vw;
+        flex: 1 0 45%;
+        max-width: none;
+        box-sizing: border-box;
+      }
+
+      @include respond-to(desktop) {
+        flex: 1 0 50%;
+      }
+
+      img {
+        width: 100%;
+        max-width: 300px;
+        max-height: 200px;
+        object-fit: contain;
+      }
+    }
+
+    .team-member-detail {
+      @include respond-to(tablet) {
+        flex: 1 0 55%;
+      }
+
+      @include respond-to(desktop) {
+        flex: 1 0 50%;
+      }
+
+      button {
+        @include respond-to(tablet) {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -37,6 +37,15 @@ if ( have_rows( $modules ) ):
         include locate_template('/parts/acf/modules/images.php');
 
         break;
+
+      case 'team_members' :
+
+        $anchor = get_sub_field('anchor');
+        $category = get_sub_field('category');
+
+        include locate_template('/parts/acf/modules/team_members.php');
+
+        break;
     }
 
   endwhile;
