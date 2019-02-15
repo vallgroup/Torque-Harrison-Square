@@ -21,23 +21,27 @@ add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, 'hsq_mega_menu
 
 <div id="mega-menu">
 
+  <div class="children-items-wrapper" >
+    <?php
+      foreach ($items as $key => $parent) {
+
+        if (count($parent->children)) {
+        ?>
+
+          <div class="children-items-title" data-parent-id="<?php echo $parent->ID; ?>"><?php echo $parent->title; ?></div>
+
+          <?php
+          echo hsq_mega_menu_children( $parent );
+        }
+      }
+    ?>
+  </div>
+
   <div class="parent-items-wrapper" >
     <?php
     if ($items && sizeof($items) > 0) {
       echo Torque_Mega_Menu_Utilities::render_parent_items( $items );
     }
-    ?>
-  </div>
-
-  <div class="children-items-wrapper" >
-    <?php
-      foreach ($items as $key => $parent) { ?>
-
-        <div class="children-items-title"><?php echo $parent->title; ?></div>
-
-        <?php
-        echo hsq_mega_menu_children( $parent );
-      }
     ?>
   </div>
 
