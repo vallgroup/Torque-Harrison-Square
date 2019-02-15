@@ -20,7 +20,7 @@ if ( have_rows( $modules ) ):
         $cta = get_sub_field('cta');
 
 
-        include locate_template('/parts/acf/modules/text_and_image.php');
+        include locate_template('/parts/acf/modules/text-and-image.php');
 
         break;
 
@@ -43,7 +43,15 @@ if ( have_rows( $modules ) ):
         $anchor = get_sub_field('anchor');
         $category = get_sub_field('category');
 
-        include locate_template('/parts/acf/modules/team_members.php');
+        include locate_template('/parts/acf/modules/team-members.php');
+
+        break;
+
+      case 'blog_posts' :
+
+        $anchor = get_sub_field('anchor');
+
+        include locate_template('/parts/acf/modules/blog-posts.php');
 
         break;
     }

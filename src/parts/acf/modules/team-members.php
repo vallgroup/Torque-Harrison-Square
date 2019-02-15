@@ -15,7 +15,7 @@ $query = new WP_Query( array(
 if ( $query->have_posts() ) {
   ?>
 
-  <div class="team-members-module">
+  <div <?php if ($anchor) { ?> id="<?php echo $anchor; ?>" <?php } class="team-members-module">
 
   <?php
 
