@@ -5,6 +5,7 @@
   letter-spacing: normal;
   text-transform: uppercase;
   color: $white;
+  user-select: none;
 
   @include respond-to(desktop) {
     font-size: 18px;
@@ -148,5 +149,13 @@
 
   &:not(.active) {
     opacity: 0;
+
+    .mega-menu-overlay {
+      display: none;
+    }
+
+    #mega-menu {
+      display: none;
+    }
   }
 }
