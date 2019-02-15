@@ -11,7 +11,14 @@
 
       $query = new WP_Query( array(
           'post_type'       => 'torque_staff',
-          'posts_per_page'  => -1
+          'posts_per_page'  => -1,
+          'tax_query'       => array(
+        		 array(
+        		  'taxonomy' => 'staff_category',
+              'field'    => 'term_id',
+        			'terms'    =>  array( 5 ),
+        		 ),
+      	   ),
       ));
 
       if ( $query->have_posts() ) {
