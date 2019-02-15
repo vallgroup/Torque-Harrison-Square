@@ -38,6 +38,41 @@ if ( class_exists( 'HSQ_Customizer' ) ) {
  }
 
 
+/**
+ * Add Staff plugin extensions
+ */
+
+if ( class_exists('Torque_Staff_CPT') ) {
+
+  add_action( 'init', function() {
+
+  	register_taxonomy(
+  		'staff_category',
+  		Torque_Staff_CPT::$staff_labels['post_type_name'],
+  		array(
+  			'label' => __( 'Staff Category' ),
+  			'rewrite' => array( 'slug' => 'category' ),
+        'hierarchical' => true,
+  		)
+  	);
+
+    pwp_add_metabox(
+      'Links',
+      array( Torque_Staff_CPT::$staff_labels['post_type_name'] ),
+      array(
+  			'name_prefix' => 'hsq_staff_meta',
+  			array(
+          'type'    => 'text',
+          'context' => 'post',
+          'name'    => '[website]',
+          'label'   => 'Website',
+  			),
+  		),
+      'hsq_staff_meta'
+    );
+
+  });
+}
 
 
 /**
