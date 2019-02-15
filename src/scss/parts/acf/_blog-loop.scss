@@ -1,0 +1,28 @@
+.blog-posts-section {
+  padding: 10px $bodyPadding1;
+
+  @include respond-to(tablet) {
+    padding: 10px $bodyPadding1 50px;
+  }
+
+  #blog-loop-entry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond-to(desktop) {
+      justify-content: flex-start;
+      margin: 0 -12px;
+    }
+
+    #blog-loop-load-more {
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+
+      h2 {
+        color: $teal-blue;
+      }
+    }
+  }
+}
