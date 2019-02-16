@@ -1,6 +1,6 @@
 <?php
 
-$anchor = $anchor ? 'id="'.$anchor.'"' : '';
+$anchor = isset($anchor) ? 'id="'.$anchor.'"' : '';
 
 ?>
 
@@ -21,7 +21,7 @@ $image_2_start_int = intval($image_2_start);
 
 $col_2 = 12 - $image_2_start_int;
 $col_1 =  $image_2_start_int;
-$tablet_stack = $stack_on_tablet ? 'stack-tablet' : '';
+$tablet_stack = isset($stack_on_tablet) && $stack_on_tablet ? 'stack-tablet' : '';
 
 ?>
 

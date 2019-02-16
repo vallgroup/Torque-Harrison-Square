@@ -1,0 +1,14 @@
+.post-single {
+  .post-single-content {
+    padding: 30px $bodyPadding1;
+    box-sizing: border-box;
+
+    @include respond-to(tablet) {
+      padding: 50px $bodyPadding2 80px;
+    }
+
+    @include respond-to(desktop) {
+      padding: 50px $bodyPadding2 60px;
+    }
+  }
+}
