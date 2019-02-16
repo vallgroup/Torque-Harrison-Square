@@ -54,6 +54,14 @@ if ( have_rows( $modules ) ):
         include locate_template('/parts/acf/modules/blog-posts.php');
 
         break;
+
+      case 'timeline' :
+
+        $anchor = get_sub_field('anchor');
+
+        include locate_template('/parts/acf/modules/timeline.php');
+
+        break;
     }
 
   endwhile;
