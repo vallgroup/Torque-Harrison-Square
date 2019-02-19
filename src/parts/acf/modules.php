@@ -62,6 +62,24 @@ if ( have_rows( $modules ) ):
         include locate_template('/parts/acf/modules/timeline.php');
 
         break;
+
+      case 'shortcode' :
+
+        include locate_template('/parts/acf/modules/shortcode.php');
+
+        break;
+
+      case 'wysiwyg' :
+
+        include locate_template('/parts/acf/modules/wysiwyg.php');
+
+        break;
+
+      case 'contact_form' :
+
+        include locate_template('/parts/acf/modules/contact-form.php');
+
+        break;
     }
 
   endwhile;
