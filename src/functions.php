@@ -76,6 +76,19 @@ if ( class_exists('Torque_Staff_CPT') ) {
 
 
 /**
+ * Contact form overrides
+ */
+function hsq_contact_fields( $fields ) {
+
+  unset( $fields['tq-state'] );
+  unset( $fields['tq-zip'] );
+
+  return $fields;
+}
+add_action( 'torque_contact_form_fields_filter', 'hsq_contact_fields' );
+
+
+/**
  * Excerpt
  */
 
