@@ -31,6 +31,104 @@ class HSQ_ACF {
     if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
+      'key' => 'group_5c744a24befb1',
+      'title' => 'Options Page',
+      'fields' => array(
+            array(
+                  'key' => 'field_5c744a6e19303',
+                  'label' => 'Contact Page Info',
+                  'name' => 'contact_page_info',
+                  'type' => 'group',
+                  'instructions' => '',
+                  'required' => 0,
+                  'conditional_logic' => 0,
+                  'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                  ),
+                  'layout' => 'block',
+                  'sub_fields' => array(
+                        array(
+                              'key' => 'field_5c744b2219304',
+                              'label' => 'contact info 1',
+                              'name' => 'contact_info_1',
+                              'type' => 'wysiwyg',
+                              'instructions' => '',
+                              'required' => 0,
+                              'conditional_logic' => 0,
+                              'wrapper' => array(
+                                    'width' => '33',
+                                    'class' => '',
+                                    'id' => '',
+                              ),
+                              'default_value' => '',
+                              'tabs' => 'text',
+                              'media_upload' => 0,
+                              'toolbar' => 'full',
+                              'delay' => 0,
+                        ),
+                        array(
+                              'key' => 'field_5c744de319306',
+                              'label' => 'contact info 2',
+                              'name' => 'contact_info_2',
+                              'type' => 'wysiwyg',
+                              'instructions' => '',
+                              'required' => 0,
+                              'conditional_logic' => 0,
+                              'wrapper' => array(
+                                    'width' => '33',
+                                    'class' => '',
+                                    'id' => '',
+                              ),
+                              'default_value' => '',
+                              'tabs' => 'text',
+                              'media_upload' => 0,
+                              'toolbar' => 'full',
+                              'delay' => 0,
+                        ),
+                        array(
+                              'key' => 'field_5c744ded19307',
+                              'label' => 'contact info 3',
+                              'name' => 'contact_info_3',
+                              'type' => 'wysiwyg',
+                              'instructions' => '',
+                              'required' => 0,
+                              'conditional_logic' => 0,
+                              'wrapper' => array(
+                                    'width' => '33',
+                                    'class' => '',
+                                    'id' => '',
+                              ),
+                              'default_value' => '',
+                              'tabs' => 'text',
+                              'media_upload' => 0,
+                              'toolbar' => 'full',
+                              'delay' => 0,
+                        ),
+                  ),
+            ),
+      ),
+      'location' => array(
+            array(
+                  array(
+                        'param' => 'options_page',
+                        'operator' => '==',
+                        'value' => 'acf-options',
+                  ),
+            ),
+      ),
+      'menu_order' => 0,
+      'position' => 'normal',
+      'style' => 'default',
+      'label_placement' => 'top',
+      'instruction_placement' => 'label',
+      'hide_on_screen' => '',
+      'active' => 1,
+      'description' => '',
+));
+
+acf_add_local_field_group(array(
       'key' => 'group_5c64a717d0ce9',
       'title' => 'Page Content',
       'fields' => array(
