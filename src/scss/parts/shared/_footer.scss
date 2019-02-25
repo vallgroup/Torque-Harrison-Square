@@ -38,6 +38,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    max-width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
 
     @include respond-to(tablet) {
       align-items: flex-end;
@@ -113,6 +116,7 @@ footer {
 
         @include respond-to(desktop) {
           padding: 0;
+          padding-top: 80px;
           width: auto;
         }
       }
