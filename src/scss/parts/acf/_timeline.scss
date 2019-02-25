@@ -10,6 +10,17 @@ $border: 4px solid $brown-grey;
 
   @include respond-to(desktop) {
     padding: 50px $bodyPadding2;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: $brown-grey;
+      height: 95%;
+      top: 2.5%;
+      left: 50%;
+      margin-left: -2px;
+    }
   }
 
   .timeline-row {
@@ -23,6 +34,7 @@ $border: 4px solid $brown-grey;
 
     @include respond-to(desktop) {
       display: flex;
+      justify-content: center;
       border: none;
       margin: 0;
       padding: 0;
@@ -58,7 +70,7 @@ $border: 4px solid $brown-grey;
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
-        border-right: $border;
+        // border-right: $border;
         padding: 20px 50px 20px 0px;
         width: 50%;
         box-sizing: border-box;
@@ -95,10 +107,10 @@ $border: 4px solid $brown-grey;
 
         .timeline-detail {
           align-items: flex-start;
-          border: {
-            right: 0;
-            left: $border;
-          }
+          // border: {
+          //   right: 0;
+          //   left: $border;
+          // }
           padding: 20px 0px 20px 50px;
 
           text-align: left;
