@@ -20,7 +20,7 @@
     max-width: 250px;
 
     @include respond-to(desktop) {
-      max-width: 350px;
+      max-width: 80%;
     }
 
     .image-size {
