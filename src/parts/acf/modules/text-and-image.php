@@ -1,12 +1,12 @@
 <div
   <?php if ($anchor) { ?> id="<?php echo $anchor; ?>" <?php } ?>
-  class="row text-and-image-section <?php echo $align; ?> <?php echo $title_text_size; ?>">
+  class="row text-and-image-section <?php echo $align; ?> <?php echo $title_text_size; ?> bg-<?php echo $background_color; ?>">
 
   <div class="image-wrapper" >
     <img src="<?php echo $image; ?>" />
   </div>
 
-  <div class="content-wrapper bg-<?php echo $background_color; ?>" >
+  <div class="content-wrapper" >
     <?php if ($title) { ?>
       <?php if ($title_text_size === 'large') { ?>
         <h1><?php echo $title; ?></h1>

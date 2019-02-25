@@ -1,6 +1,7 @@
 .text-and-image-section {
   @include respond-to(desktop) {
     display: flex;
+    align-items: center;
   }
 
   .image-wrapper {
@@ -28,6 +29,7 @@
   .content-wrapper {
     padding: 25px $bodyPadding1 40px;
     box-sizing: border-box;
+    height: 100%;
 
     @include respond-to(tablet) {
       padding: 65px $bodyPadding2 70px;
