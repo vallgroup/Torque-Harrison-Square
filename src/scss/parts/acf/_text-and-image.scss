@@ -1,7 +1,6 @@
 .text-and-image-section {
   @include respond-to(desktop) {
     display: flex;
-    align-items: center;
   }
 
   .image-wrapper {
@@ -29,15 +28,20 @@
   .content-wrapper {
     padding: 25px $bodyPadding1 40px;
     box-sizing: border-box;
-    height: 100%;
+
+    display: flex;
+    flex: 1;
+    felx-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @include respond-to(tablet) {
       padding: 65px $bodyPadding2 70px;
     }
 
     @include respond-to(desktop) {
-      padding: 75px $bodyPadding1 100px 7vw;
-      width: 45%;
+      padding: 75px 0 100px 0;
+      // width: 45%;
     }
 
     @include respond-to(widescreen) {
@@ -49,10 +53,17 @@
       margin-top: 0;
     }
 
+    .content-inner {
+      @include respond-to(desktop) {
+        width: 75%;
+      }
+    }
+
     .content {
       @include respond-to(tablet) {
         margin-bottom: 40px;
       }
+
     }
   }
 
@@ -61,8 +72,8 @@
 
     .content-wrapper {
       @include respond-to(desktop) {
-        padding-left: $bodyPadding1;
-        padding-right: 7vw;
+        // padding-left: $bodyPadding1;
+        // padding-right: 7vw;
       }
     }
   }
@@ -86,8 +97,8 @@
   }
 }
 
-main > .text-and-image-section {
-  .content-wrapper {
+main > .text-and-image-section:first-child {
+  .content-inner {
     @include respond-to(desktop) {
       padding-top: 130px !important;
     }
