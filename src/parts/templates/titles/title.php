@@ -1,7 +1,7 @@
 <?php
 
 // hero
-$url = get_the_post_thumbnail_url( null, 'large' );
+$url = get_the_post_thumbnail_url( null, 'full' );
 
 if ($url) {
 ?>

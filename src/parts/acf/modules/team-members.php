@@ -29,7 +29,7 @@ if ( $query->have_posts() ) {
     <div class="team-member bg-dark-grey" >
 
       <div class="team-member-image" >
-        <img src="<?php echo get_the_post_thumbnail_url(null, 'large') ?>" />
+        <img src="<?php echo get_the_post_thumbnail_url(null, 'full') ?>" />
       </div>
 
       <div class="team-member-detail" >
